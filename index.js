@@ -9,12 +9,17 @@ app.listen(process.env.PORT || 5000, () => {
 
 //routes
 app.get("/:word/:languageCode", (req, res) => {
-  const { word,languageCode } = req.params;
-  res.set("powered-by","google-translate-api-x");
+  const { word, languageCode } = req.params;
+  res.set("powered-by", "google-translate-api-x");
+  res.set("created-by", "Aje Damilola github.com/ajedamilola");
 
   translate(word, {
     to: languageCode,
+    client: "gtx",
   })
     .then((translated) => res.send(translated.text))
-    .catch((err) => res.status(403).json({ error: err }));
+    .catch((err) => {
+      console.log(err)
+      res.status(403).json({ error: err });
+    });
 });
