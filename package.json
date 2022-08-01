@@ -9,6 +9,6 @@
     "google-translate-api-x": "^10.3.4"
   },
   "engines": {
-    "node": "16x"
+    "node": "16.x"
   }
 }
