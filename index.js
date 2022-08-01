@@ -2,6 +2,7 @@ const express = require("express");
 const translate = require("google-translate-api-x");
 const app = express();
 app.use(express.urlencoded({ extended: false }));
+app.use(require("cors")());
 app.listen(process.env.PORT || 5000, () => {
   console.log("Express Server Started");
 });

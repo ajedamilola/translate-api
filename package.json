@@ -5,6 +5,7 @@
   "author": "Aje Damilola <ajedamilola2005@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "google-translate-api-x": "^10.3.4"
   },
