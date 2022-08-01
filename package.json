@@ -1,0 +1,14 @@
+{
+  "name": "translate-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aje Damilola <ajedamilola2005@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "google-translate-api-x": "^10.3.4"
+  },
+  "engines": {
+    "node": "16x"
+  }
+}
