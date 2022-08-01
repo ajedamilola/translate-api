@@ -8,12 +8,13 @@ app.listen(process.env.PORT || 5000, () => {
 });
 
 //routes
-app.get("/:word", (req, res) => {
-  const { word } = req.params;
+app.get("/:word/:languageCode", (req, res) => {
+  const { word,languageCode } = req.params;
+  res.set("powered-by","google-translate-api-x");
 
   translate(word, {
-    to: req.headers.language,
+    to: languageCode,
   })
-    .then((translated) => res.json({ value: translated.text }))
+    .then((translated) => res.send(translated.text))
     .catch((err) => res.status(403).json({ error: err }));
 });
