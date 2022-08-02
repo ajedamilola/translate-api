@@ -12,6 +12,7 @@ app.get("/:word/:languageCode", (req, res) => {
   const { word, languageCode } = req.params;
   res.set("powered-by", "google-translate-api-x");
   res.set("created-by", "Aje Damilola github.com/ajedamilola");
+  res.set("Cache-Control", "public, max-age=604800, immutable")
 
   translate(word, {
     to: languageCode,
