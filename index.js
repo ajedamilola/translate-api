@@ -10,9 +10,10 @@ app.listen(process.env.PORT || 5000, () => {
 //routes
 app.get("/:word/:languageCode", (req, res) => {
   const { word, languageCode } = req.params;
+  //response headers including caching
   res.set("powered-by", "google-translate-api-x");
   res.set("created-by", "Aje Damilola github.com/ajedamilola");
-  res.set("Cache-Control", "public, max-age=604800, immutable")
+  res.set("Cache-Control", "public, max-age=60480000000, immutable")
 
   translate(word, {
     to: languageCode,
