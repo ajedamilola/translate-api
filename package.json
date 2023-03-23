@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Aje Damilola <ajedamilola2005@gmail.com>",
+  "scripts":{
+    "start":"node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
